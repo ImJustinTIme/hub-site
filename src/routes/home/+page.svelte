@@ -8,7 +8,7 @@
 
 <style type="scss">
   .content {
-    width: inherit;
+    width: 100%;
   }
 
   .interactive-map {
@@ -19,7 +19,7 @@
   }
 
   .titlebar {
-    margin: 0 40px;
+    margin: 60px 40px 0 40px;
   }
 
   .title {
