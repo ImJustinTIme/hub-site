@@ -3,8 +3,6 @@ let params = {};
 /**
  * @name modalInitalState
  * @Description Modal initial state
- * 
- * @param {}
  * @param {string} ModalId unique identifier
  * @param {Boolean} Visible state
  */

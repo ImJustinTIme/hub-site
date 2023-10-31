@@ -1,9 +1,9 @@
 <script>
-  //
-  import { closeModal, processModal } from "$lib/stores/index";
-  export let buttonOptions;
+  import { closeModal } from "$lib/stores/index";
 
-  //
+  /**
+   * @type {any}
+   */
   export let title;
 </script>
 
