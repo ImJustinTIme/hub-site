@@ -17,3 +17,6 @@ rules:
   indent: 
     - error
     - 4
+  svelte/indent: 
+    - error
+    - indent: 4

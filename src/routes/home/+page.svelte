@@ -1,9 +1,9 @@
 <div class="content">
-  <div class="titlebar">
-    <span class="title">codejustin.dev</span>
-    <div class="extra-info" />
-  </div>
-  <div class="interactive-map" />
+    <div class="titlebar">
+        <span class="title">codejustin.dev</span>
+        <div class="extra-info" />
+    </div>
+    <div class="interactive-map" />
 </div>
 
 <style type="scss">
