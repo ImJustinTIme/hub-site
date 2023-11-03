@@ -1,61 +1,70 @@
 <script>
-  import { closeModal } from "$lib/stores/index";
+  /**
+   * @type {boolean}
+   */
+  export let showModal;
 
   /**
-   * @type {any}
+   * @type {HTMLDialogElement}
    */
-  export let title;
+  let dialog;
+
+  $: if (dialog && showModal) dialog.showModal();
 </script>
 
-<div class="modal-container">
-  <!--content-->
-  <div class="modal-content">
-    <!--header-->
-    <div
-      class="modal-header flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t"
-    >
-      <h3 class="modal-title text-3xl text-gray-600 font-semibold">
-        {title}
-      </h3>
-      <button
-        class="modal-close p-1 ml-auto bg-transparent border-0 text-gray-500 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-        on:click={$closeModal()}
-      >
-        <span
-          class="bg-transparent text-gray-500 opacity-4 h-6 w-6 text-2xl block outline-none focus:outline-none"
-        />
-      </button>
-    </div>
-    <!--body-->
-    <div class="relative p-6 flex-auto">
-      <slot />
-    </div>
+<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+<dialog
+  bind:this={dialog}
+  on:close={() => (showModal = false)}
+  on:click|self={() => dialog.close()}
+>
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div on:click|stopPropagation>
+    <slot name="header" />
+    <hr />
+    <slot />
+    <hr />
+    <!-- svelte-ignore a11y-autofocus -->
+    <button autofocus on:click={() => dialog.close()}>close modal</button>
   </div>
-</div>
-<div class="opacity-25 fixed inset-0 z-40 bg-black" />
+</dialog>
 
-<style lang="scss">
-  .modal-container {
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: 50;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+<style>
+  dialog {
+    max-width: 32em;
+    border-radius: 0.2em;
+    border: none;
+    padding: 0;
   }
-
-  .modal-content {
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.3);
   }
-
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
+  dialog > div {
+    padding: 1em;
   }
-
-  .modal-title {
+  dialog[open] {
+    animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-
-  .modal-close {
+  @keyframes zoom {
+    from {
+      transform: scale(0.95);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  dialog[open]::backdrop {
+    animation: fade 0.2s ease-out;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  button {
+    display: block;
   }
 </style>

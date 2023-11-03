@@ -6,9 +6,9 @@ let params = {};
  * @param {string} ModalId unique identifier
  * @param {Boolean} Visible state
  */
-  params.modalInitalState = {
+params.modalInitalState = {
     visible: false, 
     modalId: null
-  }
+};
 
-  export default params;
+export default params;
