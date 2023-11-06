@@ -1,14 +1,32 @@
-<div class="content">
-    <div class="titlebar">
-        <span class="title">codejustin.dev</span>
-        <div class="extra-info" />
+<script>
+    import { addModal } from 'Utils/modal-utils';
+    import { gameCorner } from 'Utils/modal-values';
+
+</script>
+
+<div class="page-content">
+    <div class="content">
+        <div class="titlebar">
+            <span class="title">codejustin.dev</span>
+            <button
+                on:click={() => addModal(gameCorner)}
+            >Open Game Corner</button>
+            <div class="extra-info" />
+        </div>
+        <div class="interactive-map" />
     </div>
-    <div class="interactive-map" />
 </div>
 
 <style type="scss">
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .content {
     width: 100%;
+    max-width: 90%;
   }
 
   .interactive-map {
