@@ -22,6 +22,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
+    height: 2fr;
   }
 
   .content {
@@ -33,18 +35,11 @@
     border-radius: 30px;
     margin: 20px 20px 40px 20px;
     background: var(--primary);
-    height: 80vh;
-  }
-
-  .titlebar {
-    margin: 60px 40px 0 40px;
+    height: 70vh;
   }
 
   .title {
-    background: linear-gradient(120deg, var(--primary), var(--accent));
-    background-clip: text;
     font-size: 4rem;
     font-weight: 600;
-    fill: transparent;
   }
 </style>
