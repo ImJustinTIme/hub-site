@@ -1,8 +1,9 @@
 <script>
     export let href;
+    export let onClick;
 </script>
 
-<button {href} class="link-button"><slot /></button>
+<button {href} on:click={onClick()} class="link-button"><slot /></button>
 
 <style lang="scss">
     .link-button {

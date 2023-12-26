@@ -10,11 +10,12 @@
 
 <Modal {index}>
     <h2 slot="header">Game Corner</h2>
-    <div class="game-corner-content"></div>
-    <div class="game-content-selection">
-        {#each gameCornerContentArr as game}
-            <PictureCard {...game} />
-        {/each}
+    <div class="game-corner-content">
+        <div class="game-content-selection">
+            {#each gameCornerContentArr as game}
+                <PictureCard {...game} />
+            {/each}
+        </div>
     </div>
 </Modal>
 

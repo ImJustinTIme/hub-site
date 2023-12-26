@@ -1,10 +1,12 @@
 import GameCorner from "Components/modals/GameCorner.svelte";
-
+import AboutMe from "Components/modals/AboutMe.svelte";
 export const modalPages = {
-    'gameCorner': GameCorner
+    'gameCorner': GameCorner,
+    'aboutMe': AboutMe
 };
 
 export const gameCorner = 'gameCorner';
+export const aboutMe = 'aboutme';
 
 export const gameCornerContentArr = [
     {
