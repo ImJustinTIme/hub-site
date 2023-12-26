@@ -10,7 +10,7 @@ export const gameCornerContentArr = [
     {
         appLink: 'https://imjustintime.github.io/asteroids.js/',
         alt: 'AsteroidsJs Screenshot',
-        imgScr: '/AsteroidsJs.png',
+        imgSrc: '/AsteroidsJs.png',
         descriptionText: "A web version of the classic game asteroids written in vanilla javascript with the ability to save local highscores.",
         srcLink: 'https://github.com/ImJustinTIme/asteroids.js',
         title: 'AsteroidsJs'
