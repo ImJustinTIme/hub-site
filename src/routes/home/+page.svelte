@@ -1,7 +1,7 @@
 <script>
     import LinkButton from "Components/common/LinkButton.svelte";
     import { addModal } from "Utils/modal-utils";
-    import { gameCorner, aboutMe } from "Utils/modal-values";
+    import { gameCorner, aboutMe } from "Constants/modal-values";
 </script>
 
 <div class="page-content">
@@ -9,7 +9,7 @@
         <div class="titlebar">
             <span class="title">codejustin.dev</span>
             <LinkButton onClick={() => addModal(gameCorner)}
-            >Open Game Corner</LinkButton
+                >Open Game Corner</LinkButton
             >
             <LinkButton onClick={() => addModal(aboutMe)}>About Me</LinkButton>
         </div>

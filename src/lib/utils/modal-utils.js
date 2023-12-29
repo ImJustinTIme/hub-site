@@ -1,6 +1,6 @@
 
 import { modals } from 'Stores/index';
-import { modalPages } from 'Utils/modal-values';
+import { modalPages } from 'Constants/modal-values';
 
 /**
  * 

@@ -6,7 +6,7 @@ export const modalPages = {
 };
 
 export const gameCorner = 'gameCorner';
-export const aboutMe = 'aboutme';
+export const aboutMe = 'aboutMe';
 
 export const gameCornerContentArr = [
     {

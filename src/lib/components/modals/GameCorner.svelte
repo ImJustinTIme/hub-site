@@ -1,7 +1,7 @@
 <script>
     import PictureCard from "Components/common/PictureCard.svelte";
     import Modal from "Components/modals/Modal.svelte";
-    import { gameCornerContentArr } from "Utils/modal-values.js";
+    import { gameCornerContentArr } from "Constants/modal-values.js";
     /**
      * @type {number}
      */

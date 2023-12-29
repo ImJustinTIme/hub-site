@@ -11,7 +11,8 @@ const config = {
             'Components': 'src/lib/components',
             'Stores': 'src/lib/stores',
             'Utils': 'src/lib/utils',
-            'Static': 'static'
+            'Static': 'static',
+            'Constants': 'src/lib/constants'
         }
     }
 };
