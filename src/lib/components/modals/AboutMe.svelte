@@ -12,14 +12,10 @@
 
 <Modal {index}>
     <h2 slot="header">About Justin Kuennen</h2>
-    <div class="about-me-content">
+    <div class="modal-content">
         <div class="pic-section">
             <img src="/justink.jpg" alt="photo of me" />
             <div class="skill-section">
-                <TagList
-                    title={hobbyTagList.title}
-                    tagList={hobbyTagList.tags}
-                />
                 <TagList
                     title={experiencedTechTagList.title}
                     tagList={experiencedTechTagList.tags}
@@ -28,6 +24,10 @@
                 <TagList
                     title={exploringTechTagList.title}
                     tagList={exploringTechTagList.tags}
+                />
+                <TagList
+                    title={hobbyTagList.title}
+                    tagList={hobbyTagList.tags}
                 />
             </div>
         </div>
@@ -42,21 +42,10 @@
 </Modal>
 
 <style lang="scss">
-    h2 {
-        margin: 0 15px;
-        line-height: 1;
-        margin-bottom: -2px;
-    }
-
     img {
         width: 50%;
         height: auto;
         border-radius: 15px;
-    }
-
-    .about-me-content {
-        width: 70vw;
-        padding: 15px;
     }
 
     .skill-section {
@@ -78,5 +67,6 @@
 
     .about-me-paragraph {
         border-radius: 15px;
+        padding: 20px;
     }
 </style>

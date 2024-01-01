@@ -33,7 +33,6 @@
     a {
         padding: 10px;
         max-height: 300px;
-        min-width: 400px;
     }
 
     img {

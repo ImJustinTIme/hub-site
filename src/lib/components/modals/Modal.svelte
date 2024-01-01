@@ -17,6 +17,7 @@
     bind:this={dialog}
     on:close={removeModal}
     on:click|self={() => dialog.close()}
+    {index}
 >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div on:click|stopPropagation>
@@ -37,14 +38,6 @@
 </dialog>
 
 <style>
-    .header-bar {
-        display: flex;
-        justify-content: space-between;
-        padding: 8em 10px 15px 10px;
-        align-items: center;
-        background-color: var(--accent);
-    }
-
     .close-icon {
         height: auto;
         width: 24px;
@@ -95,4 +88,3 @@
         }
     }
 </style>
-

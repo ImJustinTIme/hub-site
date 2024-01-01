@@ -1,0 +1,19 @@
+.modal-content {
+    width: 80vw;
+
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8em 10px 15px 10px;
+    align-items: center;
+    background-color: var(--accent);
+
+
+    h2 {
+        margin: 0 15px;
+        line-height: 1;
+        margin-bottom: -2px;
+    }
+}

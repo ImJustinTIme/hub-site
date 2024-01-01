@@ -1,22 +1,22 @@
 <script>
-    import { modals } from 'Stores/index.js';
-    
+    import { modals } from "Stores/index.js";
+
     /**
      * @type {any[]}
      */
     $: modalArr = [];
 
-    modals.subscribe(value => {
+    modals.subscribe((value) => {
         modalArr = value;
     });
 </script>
 
 <!-- <button on:click={() => (showModal = true)}> show modal </button> -->
 {#each modalArr as modalComponent, index}
-    <svelte:component this={modalComponent} index={index}/>
+    <svelte:component this={modalComponent} {index} />
 {/each}
 
-<slot/>
+<slot />
 
 <footer>
     <a href="/">Home</a>
@@ -25,8 +25,8 @@
 </footer>
 
 <style type="scss">
-  footer {
-    padding: 20px 20px 15px 20px;
-    background-color: var(--accent);
-  }
+    footer {
+        padding: 20px 20px 15px 20px;
+        background-color: var(--accent);
+    }
 </style>
