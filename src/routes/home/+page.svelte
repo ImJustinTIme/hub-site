@@ -8,6 +8,9 @@
     <div class="content">
         <div class="titlebar">
             <span class="title">codejustin.dev</span>
+        </div>
+
+        <div class="interactive-map">
             <LinkButton onClick={() => addModal(gameCorner)}>
                 {"Open Game Corner"}
             </LinkButton>
@@ -15,8 +18,11 @@
             <LinkButton onClick={() => addModal(projectsPage)}>
                 {"Projects Page"}
             </LinkButton>
+            <LinkButton href="https://justink.photo">
+                Photography & Art
+            </LinkButton>
+            <LinkButton href="https://blog.codejustin.dev">Blog</LinkButton>
         </div>
-        <div class="interactive-map" />
     </div>
 </div>
 
@@ -26,7 +32,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: end;
-        height: 2fr;
     }
 
     .content {
@@ -37,12 +42,25 @@
     .interactive-map {
         border-radius: 30px;
         margin: 20px 20px 40px 20px;
-        background: var(--primary);
-        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titlebar {
+        display: flex;
     }
 
     .title {
         font-size: 4rem;
         font-weight: 600;
+    }
+
+    @media (max-width: 1000px) {
+        .title {
+            font-size: 2rem;
+            margin: 15px 0 10px 0;
+        }
     }
 </style>

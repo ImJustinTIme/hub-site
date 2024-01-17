@@ -1,7 +1,7 @@
 <script>
     import LinkButton from "./LinkButton.svelte";
 
-    export let appLink;
+    export let appLink = null;
     export let alt;
     export let imgSrc;
     export let descriptionText;
@@ -23,8 +23,12 @@
             <div>{descriptionText}</div>
         </div>
         <div class="button-link-area">
-            <LinkButton href={appLink}>View</LinkButton>
-            <LinkButton href={srcLink}>Code</LinkButton>
+            {#if appLink}
+                <LinkButton href={appLink}>View</LinkButton>
+            {/if}
+            {#if srcLink}
+                <LinkButton href={srcLink}>Code</LinkButton>
+            {/if}
         </div>
     </div>
 </div>

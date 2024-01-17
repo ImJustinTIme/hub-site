@@ -31,9 +31,7 @@
             />
         </div>
         <hr />
-        <div class="modal-content">
-            <slot />
-        </div>
+        <slot />
     </div>
 </dialog>
 
@@ -85,6 +83,15 @@
         }
         to {
             opacity: 1;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        dialog {
+            min-width: 100%;
+            max-width: 100%;
+            margin-top: 0;
+            border-radius: 0;
         }
     }
 </style>

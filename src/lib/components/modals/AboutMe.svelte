@@ -42,6 +42,10 @@
 </Modal>
 
 <style lang="scss">
+    .modal-content {
+        padding: 15px;
+    }
+
     img {
         width: 50%;
         height: auto;
@@ -67,6 +71,6 @@
 
     .about-me-paragraph {
         border-radius: 15px;
-        padding: 20px;
+        padding: 20px 0;
     }
 </style>

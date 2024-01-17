@@ -1,9 +1,19 @@
 <script>
-    export let href;
-    export let onClick;
+    export let href = null;
+    export let onClick = () => null;
+
+    const clickButton = () => {
+        if (href) {
+            window.location.href = href;
+        }
+
+        if (onClick) {
+            onClick();
+        }
+    };
 </script>
 
-<button {href} on:click={onClick()} class="link-button"><slot /></button>
+<button on:click={clickButton} class="link-button"><slot /></button>
 
 <style lang="scss">
     .link-button {
@@ -13,5 +23,7 @@
         font-family: "ellograph-cf";
         border: none;
         margin: 10px;
+        height: fit-content;
+        width: fit-content;
     }
 </style>
