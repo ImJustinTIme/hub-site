@@ -42,21 +42,13 @@
         margin: 0;
     }
 
-    .modal-content {
-        padding: 10px;
-    }
-
     dialog {
         min-width: 70%;
         max-width: 90%;
         border-radius: 10px;
         border: none;
         padding: 0;
-        margin-top: 7%;
-    }
-
-    dialog::backdrop {
-        background: var(--primary);
+        bottom: 62px;
     }
 
     hr {
@@ -90,8 +82,9 @@
         dialog {
             min-width: 100%;
             max-width: 100%;
-            margin-top: 0;
-            border-radius: 0;
+            height: calc(90% - 45px);
+            margin-bottom: 0;
+            bottom: 62px;
         }
     }
 </style>

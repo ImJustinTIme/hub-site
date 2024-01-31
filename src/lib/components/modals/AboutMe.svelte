@@ -14,7 +14,7 @@
     <h2 slot="header">About Justin Kuennen</h2>
     <div class="modal-content">
         <div class="pic-section">
-            <img src="/justink.jpg" alt="photo of me" />
+            <img src="/justink.jpg" alt="me in a bedroom" />
             <div class="skill-section">
                 <TagList
                     title={experiencedTechTagList.title}
@@ -50,6 +50,7 @@
         width: 50%;
         height: auto;
         border-radius: 15px;
+        object-fit: cover;
     }
 
     .skill-section {
@@ -62,7 +63,6 @@
 
     .pic-section {
         display: flex;
-        flex-direction: columns;
         align-content: end;
         gap: 20px;
         margin-bottom: 30px;
@@ -70,7 +70,27 @@
     }
 
     .about-me-paragraph {
-        border-radius: 15px;
         padding: 20px 0;
+    }
+
+    @media (max-width: 1000px) {
+        .modal-content {
+            padding: 0;
+        }
+
+        img {
+            width: 85%;
+            margin: 30px;
+            align-self: center;
+        }
+
+        .pic-section {
+            padding: 15px;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .about-me-paragraph {
+            padding: 15px;
+        }
     }
 </style>

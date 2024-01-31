@@ -11,21 +11,25 @@
 <Modal {index}>
     <h2 slot="header">Game Corner</h2>
     <div class="modal-content">
-        {#each gameCornerContentArr as game}
-            <PictureCard {...game} />
-        {/each}
+        <div class="game-array">
+            {#each gameCornerContentArr as game}
+                <PictureCard {...game} />
+            {/each}
+        </div>
     </div>
 </Modal>
 
 <style lang="scss">
-    .modal-content {
+    .game-array {
+        display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 0.5fr 0.5fr;
     }
 
     @media (max-width: 1200px) {
-        .modal-content {
-            grid-template-columns: 1fr;
+        .game-array {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
         }
     }
 </style>

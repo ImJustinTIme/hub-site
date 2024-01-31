@@ -43,10 +43,11 @@
         width: 100%;
         height: 100%;
         border-radius: 15px;
+        object-fit: cover;
     }
 
     .stock-img {
-        width: 100%;
+        min-width: 200px;
         height: 100%;
         background: #1f1f1f;
         border-radius: 15px;
@@ -71,5 +72,25 @@
     .button-link-area {
         display: flex;
         width: 100%;
+    }
+
+    @media (max-width: 1000px) {
+        .card-container {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+            margin: 0;
+        }
+
+        .card-text {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin: 6px 0;
+        }
+
+        a {
+            padding: 5px 10px 2px 10px;
+        }
     }
 </style>
