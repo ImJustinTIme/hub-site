@@ -20,14 +20,14 @@
     <div class="card-text">
         <div>
             <h3>{title}</h3>
-            <div>{descriptionText}</div>
+            <div class="description-text">{descriptionText}</div>
         </div>
         <div class="button-link-area">
             {#if appLink}
-                <LinkButton href={appLink}>View</LinkButton>
+                <LinkButton href={appLink}>Play</LinkButton>
             {/if}
             {#if srcLink}
-                <LinkButton href={srcLink}>Code</LinkButton>
+                <LinkButton href={srcLink}>View Code</LinkButton>
             {/if}
         </div>
     </div>
@@ -36,18 +36,18 @@
 <style lang="scss">
     a {
         padding: 10px;
-        max-height: 300px;
     }
 
     img {
-        width: 100%;
+        max-width: 15rem;
         height: 100%;
+
         border-radius: 15px;
         object-fit: cover;
     }
 
     .stock-img {
-        min-width: 200px;
+        width: 15rem;
         height: 100%;
         background: #1f1f1f;
         border-radius: 15px;
@@ -62,27 +62,41 @@
         justify-content: space-between;
     }
     .card-container {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
-        margin: 10px;
+        display: flex;
         min-height: 300px;
     }
 
     .button-link-area {
         display: flex;
         width: 100%;
+        align-items: stretch;
+        gap: 10px;
     }
 
     @media (max-width: 1000px) {
         .card-container {
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr;
             margin: 0;
+            flex-direction: column;
+        }
+
+        a {
+            width: 100%;
+            min-width: 200px;
+            min-height: 200px;
+        }
+
+        .stock-img {
+            width: 100%;
+            min-width: 200px;
+            min-height: 200px;
         }
 
         .card-text {
             margin-bottom: 20px;
+        }
+
+        .description-text {
+            max-width: 100%;
         }
 
         h3 {

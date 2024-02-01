@@ -12,7 +12,7 @@
 
 <Modal {index}>
     <h2 slot="header">About Justin Kuennen</h2>
-    <div class="modal-content">
+    <div class="about-me-content">
         <div class="pic-section">
             <img src="/justink.jpg" alt="me in a bedroom" />
             <div class="skill-section">
@@ -42,10 +42,9 @@
 </Modal>
 
 <style lang="scss">
-    .modal-content {
+    .about-me-content {
         padding: 15px;
     }
-
     img {
         width: 50%;
         height: auto;
@@ -74,10 +73,6 @@
     }
 
     @media (max-width: 1000px) {
-        .modal-content {
-            padding: 0;
-        }
-
         img {
             width: 85%;
             margin: 30px;

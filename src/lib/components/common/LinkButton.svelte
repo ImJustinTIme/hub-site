@@ -23,7 +23,6 @@
         font-family: "ellograph-cf";
         border: none;
         margin: 10px 0 10px 0;
-        height: fit-content;
         width: fit-content;
         text-align: center;
     }
