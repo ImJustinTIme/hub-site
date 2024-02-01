@@ -49,6 +49,7 @@
         border: none;
         padding: 0;
         bottom: 62px;
+        overflow: hidden;
     }
 
     hr {

@@ -10,44 +10,71 @@
             <span class="title">codejustin.dev</span>
         </div>
 
-        <div class="interactive-map">
-            <LinkButton onClick={() => addModal(gameCorner)}>
-                {"Open Game Corner"}
-            </LinkButton>
-            <LinkButton onClick={() => addModal(aboutMe)}>About Me</LinkButton>
-            <LinkButton onClick={() => addModal(projectsPage)}>
-                {"Projects Page"}
-            </LinkButton>
-            <LinkButton href="https://justink.photo">
-                Photography & Art
-            </LinkButton>
-            <LinkButton href="https://blog.codejustin.dev">Blog</LinkButton>
+        <div class="link-map">
+            <div class="link-container">
+                <LinkButton onClick={() => addModal(gameCorner)}>
+                    {"Game Corner"}
+                </LinkButton>
+            </div>
+            <div class="link-container">
+                <LinkButton onClick={() => addModal(aboutMe)}
+                >About Me</LinkButton
+                >
+            </div>
+            <div class="link-container">
+                <LinkButton onClick={() => addModal(projectsPage)}>
+                    {"Projects Page"}
+                </LinkButton>
+            </div>
+            <div class="link-container">
+                <LinkButton href="https://justink.photo">
+                    Photography & Art
+                </LinkButton>
+            </div>
+            <div class="link-container">
+                <LinkButton href="https://blog.codejustin.dev">Blog</LinkButton>
+            </div>
         </div>
     </div>
 </div>
 
 <style type="scss">
     .page-content {
+        height: 100%;
+        justify-content: center;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: end;
     }
 
     .content {
         width: 100%;
         max-width: 90%;
-    }
-
-    .interactive-map {
-        border-radius: 30px;
-        margin: 20px 20px 40px 20px;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 
+    .link-map {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        border-radius: 15px;
+        background: var(--accent-2);
+    }
+
+    .link-map > :nth-child(n + 4) {
+        grid-column: span 3;
+    }
+
+    .link-container {
+        display: flex;
+        place-content: center;
+        grid-column: span 2;
+    }
     .titlebar {
         display: flex;
     }
@@ -61,6 +88,23 @@
         .title {
             font-size: 2rem;
             margin: 15px 0 10px 0;
+        }
+
+        .content {
+            justify-content: start;
+            gap: 20px;
+        }
+
+        .link-map {
+            width: 80%;
+        }
+
+        .link-container {
+            grid-column: span 6;
+        }
+
+        .link-map > :nth-child(n + 4) {
+            grid-column: span 6;
         }
     }
 </style>
