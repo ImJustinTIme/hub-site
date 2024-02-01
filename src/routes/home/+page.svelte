@@ -62,6 +62,7 @@
         justify-content: center;
         align-items: center;
         padding: 15px;
+        gap: 15px;
         border-radius: 15px;
         background: var(--accent-2);
     }

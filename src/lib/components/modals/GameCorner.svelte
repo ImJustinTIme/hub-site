@@ -25,11 +25,6 @@
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         height: 100%;
-
-        .game-item {
-            display: grid;
-            place-content: center;
-        }
     }
 
     @media (max-width: 1200px) {

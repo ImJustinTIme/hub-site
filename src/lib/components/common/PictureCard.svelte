@@ -60,10 +60,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        height: 100%;
     }
     .card-container {
         display: flex;
         min-height: 300px;
+        height: 100%;
     }
 
     .button-link-area {
@@ -73,22 +75,21 @@
         gap: 10px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         .card-container {
             margin: 0;
             flex-direction: column;
         }
 
-        a {
+        .stock-img {
             width: 100%;
-            min-width: 200px;
             min-height: 200px;
         }
 
-        .stock-img {
-            width: 100%;
-            min-width: 200px;
-            min-height: 200px;
+        img {
+            min-width: 100%;
+            max-height: 200px;
+            aspect-ratio: auto;
         }
 
         .card-text {
