@@ -5,7 +5,7 @@
 
 <div class="tag-pill" style={`background: ${color || "#818a91"};`}>
     {#if Icon}
-        <Icon />
+        <svelte:component this={Icon} />
     {/if}
     <div>
         <slot />
