@@ -22,6 +22,7 @@ export const gameCornerContentArr = [
     },
     {
         alt: 'Angular Tetris Screenshot',
+        imgSrc: '/AsteroidsJs.png',
         descriptionText: "Nes style tetris written with angular to try it out",
         srcLink: 'https://github.com/ImJustinTIme/tetris-ang',
         title: 'Angular Tetris'

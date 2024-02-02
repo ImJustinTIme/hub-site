@@ -13,6 +13,7 @@ const config = {
             'Components': 'src/lib/components',
             'Stores': 'src/lib/stores',
             'Utils': 'src/lib/utils',
+            'Styles': 'src/lib/styles',
             'Static': 'static',
             'Constants': 'src/lib/constants'
         }

@@ -11,11 +11,11 @@
 
 <div class="card-container">
     <a href={appLink}>
-        {#if imgSrc}
-            <img src={imgSrc} {alt} />
-        {:else}
-            <div class={"stock-img"} />
-        {/if}
+        <div class="stock-img">
+            {#if imgSrc}
+                <img src={imgSrc} {alt} />
+            {/if}
+        </div>
     </a>
     <div class="card-text">
         <div>
@@ -39,18 +39,20 @@
     }
 
     img {
-        max-width: 15rem;
+        max-height: 100%;
+        width: 100%;
         height: 100%;
-
+        max-width: 100%;
         border-radius: 15px;
         object-fit: cover;
     }
 
     .stock-img {
-        width: 15rem;
+        width: 20rem;
         height: 100%;
         background: #1f1f1f;
         border-radius: 15px;
+        display: inline-block;
     }
     h3 {
         margin-top: 5px;
@@ -65,6 +67,7 @@
     .card-container {
         display: flex;
         min-height: 300px;
+        max-width: 40vw;
         height: 100%;
     }
 
@@ -78,26 +81,18 @@
     @media (max-width: 1200px) {
         .card-container {
             margin: 0;
+            max-width: 99%;
             flex-direction: column;
         }
 
         .stock-img {
             width: 100%;
             min-height: 200px;
-        }
-
-        img {
-            min-width: 100%;
             max-height: 200px;
-            aspect-ratio: auto;
         }
 
         .card-text {
             margin-bottom: 20px;
-        }
-
-        .description-text {
-            max-width: 100%;
         }
 
         h3 {

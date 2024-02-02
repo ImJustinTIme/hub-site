@@ -27,6 +27,7 @@
         height: 100%;
     }
 
-    @media (max-width: 1200px) {
+    .game-item {
+        grid-column: span 1;
     }
 </style>
