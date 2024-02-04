@@ -1,0 +1,41 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/",
+			"headers": {
+				"Location": "/home"
+			},
+			"status": 307
+		},
+		{
+			"src": "/home",
+			"dest": "/home/"
+		},
+		{
+			"src": "/home/",
+			"status": 308,
+			"headers": {
+				"Location": "/home"
+			}
+		},
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "/.*",
+			"dest": "/fn"
+		}
+	],
+	"overrides": {
+		"home.html": {
+			"path": "home"
+		}
+	}
+}
