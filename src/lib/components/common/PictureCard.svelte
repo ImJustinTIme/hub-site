@@ -48,7 +48,7 @@
     }
 
     .stock-img {
-        width: 20rem;
+        width: 18rem;
         height: 100%;
         background: #1f1f1f;
         border-radius: 15px;
@@ -62,12 +62,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
     }
     .card-container {
         display: flex;
         min-height: 300px;
-        max-width: 40vw;
+
         height: 100%;
     }
 
