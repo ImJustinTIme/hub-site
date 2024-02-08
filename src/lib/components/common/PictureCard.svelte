@@ -23,11 +23,10 @@
             <div class="description-text">{descriptionText}</div>
         </div>
         <div class="button-link-area">
-            {#if appLink}
-                <LinkButton href={appLink}>Play</LinkButton>
-            {/if}
             {#if srcLink}
-                <LinkButton href={srcLink}>View Code</LinkButton>
+                <LinkButton --buttonWidth={"80%"} href={srcLink}
+                    >View Code</LinkButton
+                >
             {/if}
         </div>
     </div>
@@ -36,6 +35,7 @@
 <style lang="scss">
     a {
         padding: 10px;
+        max-height: var(--picMaxHeight, unset);
     }
 
     img {
@@ -43,22 +43,23 @@
         width: 100%;
         height: 100%;
         max-width: 100%;
-        border-radius: 15px;
-        object-fit: cover;
+        border-radius: 11px;
+        object-fit: var(--imgFit, cover);
     }
 
     .stock-img {
-        width: 18rem;
+        width: var(--picWidth, 18rem);
         height: 100%;
         background: #1f1f1f;
         border-radius: 15px;
+        border: 4px solid #1f1f1f;
         display: inline-block;
     }
     h3 {
         margin-top: 5px;
     }
     .card-text {
-        padding: 0 10px;
+        padding: 10px 10px 0 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -73,7 +74,7 @@
     .button-link-area {
         display: flex;
         width: 100%;
-        align-items: stretch;
+        justify-content: center;
         gap: 10px;
     }
 

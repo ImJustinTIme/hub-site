@@ -18,7 +18,7 @@
             </div>
             <div class="link-container">
                 <LinkButton onClick={() => addModal(aboutMe)}
-                >About Me</LinkButton
+                    >About Me</LinkButton
                 >
             </div>
             <div class="link-container">
@@ -75,6 +75,7 @@
         display: flex;
         place-content: center;
         grid-column: span 2;
+        padding-bottom: 10px;
     }
     .titlebar {
         display: flex;
