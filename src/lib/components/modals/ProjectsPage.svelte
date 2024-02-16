@@ -15,6 +15,7 @@
             <PictureCard
                 --picWidth={"30rem"}
                 --picMaxHeight={"300px"}
+                --buttonWidth={"80%"}
                 --imgFit={project.imgFit || "cover"}
                 {...project}
             />

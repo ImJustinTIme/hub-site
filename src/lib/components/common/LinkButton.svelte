@@ -22,8 +22,8 @@
         background: var(--accent);
         font-family: "ellograph-cf";
         border: none;
-        margin-top: 10px;
-        margin-bottom: 2px;
+        margin: 10px 0;
+
         width: var(--buttonWidth, 100%);
         text-align: center;
     }

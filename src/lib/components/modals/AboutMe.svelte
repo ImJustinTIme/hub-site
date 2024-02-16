@@ -46,14 +46,13 @@
         padding: 15px;
     }
     img {
-        width: 50%;
-        height: auto;
+        width: 30rem;
+        max-height: 400px;
         border-radius: 15px;
         object-fit: cover;
     }
 
     .skill-section {
-        border-radius: 15px;
         width: 100%;
         justify-content: end;
         display: flex;

@@ -5,8 +5,8 @@
     export let tagList;
 </script>
 
-<div class="sidebar">
-    <div class="tag-list-title">{title}</div>
+<div class="sidebar" i>
+    <h3 class="tag-list-title">{title}</h3>
     <div class="tag-list">
         {#each tagList as tag}
             <Tag Icon={tag.icon} color={tag.color}>{tag.tag}</Tag>
@@ -16,12 +16,13 @@
 
 <style lang="scss">
     .tag-list-title {
-        margin: 5px 0;
+        margin: 8px 0;
     }
 
     .tag-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 5px;
+        gap: 6px;
+        margin-bottom: 8px;
     }
 </style>

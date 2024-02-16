@@ -13,7 +13,7 @@
     <div class="game-array">
         {#each gameCornerContentArr as game}
             <div class="game-item">
-                <PictureCard {...game} />
+                <PictureCard --buttonWidth={"100%"} {...game} />
             </div>
         {/each}
     </div>

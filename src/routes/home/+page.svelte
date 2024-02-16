@@ -75,8 +75,8 @@
         display: flex;
         place-content: center;
         grid-column: span 2;
-        padding-bottom: 10px;
     }
+
     .titlebar {
         display: flex;
     }

@@ -24,9 +24,7 @@
         </div>
         <div class="button-link-area">
             {#if srcLink}
-                <LinkButton --buttonWidth={"80%"} href={srcLink}
-                    >View Code</LinkButton
-                >
+                <LinkButton href={srcLink}>View Code</LinkButton>
             {/if}
         </div>
     </div>
@@ -39,11 +37,15 @@
     }
 
     img {
-        max-height: 100%;
+        max-height: inherit;
         width: 100%;
         height: 100%;
         max-width: 100%;
-        border-radius: 11px;
+        border-radius: 15px;
+        box-shadow:
+            0 5px 10px rgba(154, 160, 185, 0.05),
+            0 15px 40px rgba(166, 173, 201, 0.2);
+
         object-fit: var(--imgFit, cover);
     }
 
@@ -51,9 +53,11 @@
         width: var(--picWidth, 18rem);
         height: 100%;
         background: #1f1f1f;
-        border-radius: 15px;
-        border: 4px solid #1f1f1f;
+        border-radius: 16px;
         display: inline-block;
+        box-shadow:
+            0 5px 10px rgba(154, 160, 185, 0.05),
+            0 15px 40px rgba(166, 173, 201, 0.2);
     }
     h3 {
         margin-top: 5px;
@@ -89,6 +93,10 @@
             width: 100%;
             min-height: 200px;
             max-height: 200px;
+        }
+
+        img {
+            min-height: 200px;
         }
 
         .card-text {

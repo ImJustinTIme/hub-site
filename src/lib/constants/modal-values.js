@@ -19,21 +19,14 @@ export const gameCornerContentArr = [
         descriptionText: "A web version of the classic game asteroids written in vanilla javascript with the ability to save local highscores.",
         srcLink: 'https://github.com/ImJustinTIme/asteroids.js',
         title: 'AsteroidsJs'
-    },
-    {
-        alt: 'Angular Tetris Screenshot',
-        imgSrc: '/AsteroidsJs.png',
-        descriptionText: "Nes style tetris written with angular to try it out",
-        srcLink: 'https://github.com/ImJustinTIme/tetris-ang',
-        title: 'Angular Tetris'
-    },
+    }
 ];
 
 
 export const projectsPageContentArr = [
     {
         alt: 'Dri-Stack Website',
-
+        imgSrc: 'DriStack.png',
         descriptionText: 'First projected worked on at QCI for a startup trying to dry corn and grain faster using Iot devices.I Make the website side in React with the ant design UI library. The backend is written in C# with MySql database. Also was the first time using Threejs to model a grain bin to show the status of it in real time.',
         title: 'QCI Work: Dri-Stack Website'
     },
