@@ -38,6 +38,7 @@ export const projectsPageContentArr = [
     },
     {
         alt: 'Tetris Clock',
+        imgSrc: '/tetris clock.png',
         descriptionText: 'A work in progress clock made with a Matrix Portal M4 and a dot matrix display on it. The idea is to have tetriminos fall down and form the numbers displaying the time.',
         srcLink: 'https://github.com/ImJustinTIme/tetris-clock',
         title: 'Tetris Clock'
