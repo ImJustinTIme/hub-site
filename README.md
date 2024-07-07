@@ -1,7 +1,7 @@
 # codeJustin.dev Personal Website
 
 ## About The Project
-- - -
+
 Been trying to revamp my personal website to move away from the cookie cutter template that I used in college. The Big Idea here is the style of the page is very much inspired by websites like neopets of webkinz. Wanting the page to act like a world in one of those site. With the main animation there will be various hotspots to click leading to the various other pages of the sites and links to projects I have worked on. While still in progress on the animation side, the guts of the website have been laid.
 
 ## Developing
