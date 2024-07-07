@@ -1,4 +1,6 @@
-# codeJustin.dev Personal Website
+<p align='center'><img width='12.5%' src='https://www.codejustin.dev/Crunchy%20(Small).png'><img></p>
+
+**<h1 align='center'>codejustin.dev</h1>**
 
 ## About The Project
 
