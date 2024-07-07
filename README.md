@@ -1,18 +1,8 @@
-# create-svelte
+# codeJustin.dev Personal Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## About The Project
+- - -
+Been trying to revamp my personal website to move away from the cookie cutter template that I used in college. The Big Idea here is the style of the page is very much inspired by websites like neopets of webkinz. Wanting the page to act like a world in one of those site. With the main animation there will be various hotspots to click leading to the various other pages of the sites and links to projects I have worked on. While still in progress on the animation side, the guts of the website have been laid.
 
 ## Developing
 
