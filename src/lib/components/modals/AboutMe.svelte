@@ -7,11 +7,14 @@
         hobbyTagList,
     } from "Constants/tag-list-constants.js";
 
-    export let index;
+    /** @type {{index: any}} */
+    let { index } = $props();
 </script>
 
 <Modal {index}>
-    <h2 slot="header">About Justin Kuennen</h2>
+    {#snippet header()}
+        <h2 >About Justin Kuennen</h2>
+    {/snippet}
     <div class="about-me-content">
         <div class="pic-section">
             <img src="/justink.jpg" alt="me in a bedroom" />

@@ -1,12 +1,15 @@
 <script>
     import LinkButton from "./LinkButton.svelte";
 
-    export let appLink = null;
-    export let alt;
-    export let imgSrc;
-    export let descriptionText;
-    export let srcLink;
-    export let title;
+    /** @type {{appLink?: any, alt: any, imgSrc: any, descriptionText: any, srcLink: any, title: any}} */
+    let {
+        appLink = null,
+        alt,
+        imgSrc,
+        descriptionText,
+        srcLink,
+        title
+    } = $props();
 </script>
 
 <div class="card-container">

@@ -1,38 +1,42 @@
 <script>
+    import { run, self, createBubbler, stopPropagation } from 'svelte/legacy';
+
+    const bubble = createBubbler();
     import { removeModal } from "Utils/modal-utils";
-    /**
-     * @type {number}
-     */
-    export let index;
+    
+    /** @type {{index: number, header?: import('svelte').Snippet, children?: import('svelte').Snippet}} */
+    let { index, header, children } = $props();
     /**
      * @type {HTMLDialogElement}
      */
-    let dialog;
+    let dialog = $state();
 
-    $: if (dialog) dialog.showModal();
+    run(() => {
+        if (dialog) dialog.showModal();
+    });
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
 <dialog
     bind:this={dialog}
-    on:close={removeModal}
-    on:click|self={() => dialog.close()}
+    onclose={removeModal}
+    onclick={self(() => dialog.close())}
     {index}
 >
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div on:click|stopPropagation>
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <div onclick={stopPropagation(bubble('click'))}>
         <div class="header-bar">
-            <slot name="header" />
+            {@render header?.()}
             <img
                 class="close-icon"
                 src="/close.svg"
                 alt="close-icon"
-                on:click={() => dialog.close()}
+                onclick={() => dialog.close()}
             />
         </div>
         <hr />
         <div class="modal-content">
-            <slot />
+            {@render children?.()}
         </div>
     </div>
 </dialog>

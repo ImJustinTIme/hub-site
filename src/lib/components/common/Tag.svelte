@@ -1,14 +1,14 @@
 <script>
-    export let Icon;
-    export let color;
+    /** @type {{Icon: any, color: any, children?: import('svelte').Snippet}} */
+    let { Icon, color, children } = $props();
 </script>
 
 <div class="tag-pill" style={`background: ${color || "#818a91"};`}>
     {#if Icon}
-        <svelte:component this={Icon} />
+        <Icon />
     {/if}
     <div>
-        <slot />
+        {@render children?.()}
     </div>
 </div>
 

@@ -1,6 +1,6 @@
 <script>
-    export let href = null;
-    export let onClick = () => null;
+    /** @type {{href?: any, onClick?: any, children?: import('svelte').Snippet}} */
+    let { href = null, onClick = () => null, children } = $props();
 
     const clickButton = () => {
         if (href) {
@@ -13,7 +13,7 @@
     };
 </script>
 
-<button on:click={clickButton} class="link-button"><slot /></button>
+<button onclick={clickButton} class="link-button">{@render children?.()}</button>
 
 <style lang="scss">
     .link-button {

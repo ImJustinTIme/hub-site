@@ -2,14 +2,15 @@
     import PictureCard from "Components/common/PictureCard.svelte";
     import Modal from "Components/modals/Modal.svelte";
     import { gameCornerContentArr } from "Constants/modal-values.js";
-    /**
-     * @type {number}
-     */
-    export let index;
+    
+    /** @type {{index: number}} */
+    let { index } = $props();
 </script>
 
 <Modal {index}>
-    <h2 slot="header">Game Corner</h2>
+    {#snippet header()}
+        <h2 >Game Corner</h2>
+    {/snippet}
     <div class="game-array">
         {#each gameCornerContentArr as game}
             <div class="game-item">

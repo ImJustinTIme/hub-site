@@ -2,14 +2,15 @@
     import PictureCard from "Components/common/PictureCard.svelte";
     import Modal from "Components/modals/Modal.svelte";
     import { projectsPageContentArr } from "Constants/modal-values.js";
-    /**
-     * @type {number}
-     */
-    export let index;
+    
+    /** @type {{index: number}} */
+    let { index } = $props();
 </script>
 
 <Modal {index}>
-    <h2 slot="header">Projects Page</h2>
+    {#snippet header()}
+        <h2 >Projects Page</h2>
+    {/snippet}
     <div class="project-list">
         {#each projectsPageContentArr as project}
             <PictureCard

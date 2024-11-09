@@ -1,8 +1,8 @@
 <script>
     import Tag from "Components/common/Tag.svelte";
 
-    export let title;
-    export let tagList;
+    /** @type {{title: any, tagList: any}} */
+    let { title, tagList } = $props();
 </script>
 
 <div class="sidebar" i>

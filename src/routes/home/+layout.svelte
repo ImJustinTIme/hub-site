@@ -1,10 +1,13 @@
 <script>
     import { modals } from "Stores/index.js";
+    /** @type {{children?: import('svelte').Snippet}} */
+    let { children } = $props();
 
     /**
      * @type {any[]}
      */
-    $: modalArr = [];
+    let modalArr = $state([]);
+    
 
     modals.subscribe((value) => {
         modalArr = value;
@@ -13,10 +16,11 @@
 
 <!-- <button on:click={() => (showModal = true)}> show modal </button> -->
 {#each modalArr as modalComponent, index}
-    <svelte:component this={modalComponent} {index} />
+    {@const SvelteComponent = modalComponent}
+    <SvelteComponent {index} />
 {/each}
 
-<slot />
+{@render children?.()}
 
 <footer>
     <a href="https://github.com/ImJustinTIme"> Github </a>
