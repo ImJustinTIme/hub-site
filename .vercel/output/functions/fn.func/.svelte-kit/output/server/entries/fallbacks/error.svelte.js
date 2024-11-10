@@ -1,4 +1,4 @@
-import { g as getContext, c as create_ssr_component, a as subscribe, e as escape } from "../../chunks/ssr.js";
+import { R as getContext, S as escape_html, T as store_get, V as unsubscribe_stores, Q as pop, O as push } from "../../chunks/index.js";
 import "../../chunks/exports.js";
 function get(key, parse = JSON.parse) {
   try {
@@ -31,12 +31,13 @@ const page = {
     return store.subscribe(fn);
   }
 };
-const Error$1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $page, $$unsubscribe_page;
-  $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  $$unsubscribe_page();
-  return `<h1>${escape($page.status)}</h1> <p>${escape($page.error?.message)}</p>`;
-});
+function Error$1($$payload, $$props) {
+  push();
+  var $$store_subs;
+  $$payload.out += `<h1>${escape_html(store_get($$store_subs ??= {}, "$page", page).status)}</h1> <p>${escape_html(store_get($$store_subs ??= {}, "$page", page).error?.message)}</p>`;
+  if ($$store_subs) unsubscribe_stores($$store_subs);
+  pop();
+}
 export {
   Error$1 as default
 };
